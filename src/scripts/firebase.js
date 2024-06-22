@@ -3,7 +3,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, si
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDqysohgLq1StvsQCVGLEsiTtg-HMBidjg",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "gradey-webapp.firebaseapp.com",
   databaseURL: "https://gradey-webapp-default-rtdb.firebaseio.com",
   projectId: "gradey-webapp",

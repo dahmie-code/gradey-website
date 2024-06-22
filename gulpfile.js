@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { src, dest, task, series, watch, parallel } = require("gulp");
 const sass = require("gulp-sass")(require('sass'));
 const rm = require("gulp-rm");
