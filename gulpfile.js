@@ -25,15 +25,15 @@ const env = process.env.NODE_ENV;
 const { SRC_PATH, DIST_PATH, STYLES_LIBS, JS_LIBS } = require("./gulp.config");
 
 task('replace-env', function() {
-  return src('src/scripts/*.js')
-    .pipe(replace('process.env.REACT_APP_FIREBASE_API_KEY', `"${process.env.REACT_APP_FIREBASE_API_KEY}"`))
-    .pipe(replace('process.env.REACT_APP_AUTH_DOMAIN', `"${process.env.REACT_APP_AUTH_DOMAIN}"`))
-    .pipe(replace('process.env.REACT_APP_PROJECT_ID', `"${process.env.REACT_APP_PROJECT_ID}"`))
-    .pipe(replace('process.env.REACT_APP_STORAGE_BUCKET', `"${process.env.REACT_APP_STORAGE_BUCKET}"`))
-    .pipe(replace('process.env.REACT_APP_MESSAGING_SENDER_ID', `"${process.env.REACT_APP_MESSAGING_SENDER_ID}"`))
-    .pipe(replace('process.env.REACT_APP_APP_ID', `"${process.env.REACT_APP_APP_ID}"`))
-    .pipe(dest('dist/scripts'));
-});
+    return src('src/scripts/*.js')
+      .pipe(replace('process.env.FIREBASE_API_KEY', `"${process.env.FIREBASE_API_KEY}"`))
+      .pipe(replace('process.env.AUTH_DOMAIN', `"${process.env.AUTH_DOMAIN}"`))
+      .pipe(replace('process.env.PROJECT_ID', `"${process.env.PROJECT_ID}"`))
+      .pipe(replace('process.env.STORAGE_BUCKET', `"${process.env.STORAGE_BUCKET}"`))
+      .pipe(replace('process.env.MESSAGING_SENDER_ID', `"${process.env.MESSAGING_SENDER_ID}"`))
+      .pipe(replace('process.env.APP_ID', `"${process.env.APP_ID}"`))
+      .pipe(dest('dist/scripts'));
+  });
 
 task("clean", () => {
   return src(`${DIST_PATH}/**/*`, { read: false }).pipe(rm());
