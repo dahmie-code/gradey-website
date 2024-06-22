@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Gradey-Grade Tracker Home</title>
+  <link rel="stylesheet" href="main.min.css">
+  <link rel="icon" href="./img/favicon-32x32.png" sizes="32x32" type="image/png">
+</head>
+
+<body>
+  <div class="grid-container">
+    <header class="header grid-item">
+      <div class="content-container">
+        <div class="header-logo">
+          <a href="#home" class="header-logo__link">
+            <img class="header-logo__pic" src="./img/logo-circle.png" alt="Logo Gradey">
+          </a>
+        </div>
+        <nav class="nav-menu">
+          <ul class="menu-list">
+            <li class="menu-item menu-item--active">
+              <a href="#home" class="menu-item__link">
+                Home
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#features" class="menu-item__link">
+                Features
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#usage" class="menu-item__link">
+                How it works
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#feedback" class="menu-item__link">
+                Review
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#contacts" class="menu-item__link">
+                Contact us
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div style="display: flex">
+          <a href="./login.html" class="btn">Sign In</a>
+          <div style="position: relative">
+            <burger-menu></burger-menu>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main grid-item grid-container" id="home" style="position: relative">
+      <menu-overlay></menu-overlay>
+      <section class="hero grid-item">
+        <div class="content-container">
+          <div class="hero-desc">
+            <h2 class="hero-desc__title">Take Control of <br> Your Grades </h2>
+            <h3 class="hero-desc__subtitle">Your Grade in your hands</h3>
+            <a href="./register.html" class="btn__arr hero-desc__btn">Sign Up! It’s FREE</a>
+          </div>
+          <div class="hero-img">
+            <div class="hero-img-pic">
+              <img src="./img/svg/cellphone.svg" alt="main page">
+            </div>
+          </div>
+        </div>
+        <div class="decor-main">
+          <img src="./img/svg/decor-main.svg" alt="Decor circle">
+        </div>
+        <div class="decor-bubble1 anima3">
+          <img src="./img/svg/decor-bubble1.svg" alt="Decor circle">
+        </div>
+        <div class="decor-bubble2 anima2">
+          <img src="./img/svg/decor-bubble2.svg" alt="Decor circle">
+        </div>
+        <div class="decor-bubble3 anima">
+          <img src="./img/svg/decor-bubble3.svg" alt="Decor circle">
+        </div>
+      </section>
+      <section class="feature grid-item" id="features">
+        <div class="content-container feature-content-container">
+          <div class="feature-desc">
+            <div class="feature-desc__card">
+              <h3 class="feature-desc__title">Track Coursework and Exams</h3>
+              <p class="feature-desc__text">
+                Keep track of your grades and calculate your average without hastle, which is calculated from your
+                course item's marks
+              </p>
+            </div>
+            <div class="feature-desc__card">
+              <h3 class="feature-desc__title">Auto Average Calculation</h3>
+              <p class="feature-desc__text">Gradey grade tracker will automatically calculate your course average. You
+                will always know exactly where you stand</p>
+            </div>
+          </div>
+          <div class="feature-img">
+            <div class="feature-img-pic">
+              <img src="./img/svg/cellphone_app.svg" alt="Feature pic">
+            </div>
+          </div>
+        </div>
+        <div class="decor-feature">
+          <img src="./img/svg/decor-feature.svg" alt="Decor circle">
+        </div>
+        <div class="decor-feature-mobile">
+          <img src="./img/svg/decor-feature-mobile.svg" alt="Decor circle">
+        </div>
+        <div class="decor-feature-bubble-1 anima3">
+          <img src="./img/svg/decor-feature-bubble-1.svg" alt="Decor circle">
+        </div>
+      </section>
+      <section class="feature-dbl grid-item">
+        <div class="content-container">
+          <div class="feature-img">
+            <div class="feature-img-pic feature-dbl-img-pic">
+              <img src="./img/svg/cellphone_app.svg" alt="Feature pic2">
+            </div>
+          </div>
+          <div class="feature-desc feature-desc__card--left">
+            <div class="feature-desc__card">
+              <h3 class="feature-desc__title">Tailored to you</h3>
+              <p class="feature-desc__text">
+                Set up your own target grades, and track your grades tailored to your personalised setup
+              </p>
+            </div>
+            <div class="feature-desc__card">
+              <h3 class="feature-desc__title">What do I need</h3>
+              <p class="feature-desc__text">
+                Gives you an insight of what you will need to achieve your target grade
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="decor-feature2">
+          <img src="./img/svg/decor-feature2.svg" alt="Decor circle">
+        </div>
+        <div class="decor-feature-bubble-2 anima">
+          <img src="./img/svg/decor-feature-bubble-2.svg" alt="Decor circle">
+        </div>
+      </section>
+      <section class="download grid-item">
+        <div class="content-container flex-direction-column">
+          <h2 class="title">
+            Download Gradey App for academic success at your fingertips!
+          </h2>
+          <p class="text">
+            Effortlessly track your coursework and exams, calculate your course average automatically, and set
+            personalized target grades to achieve your academic goals.
+          </p>
+          <a class="app-sore__link">
+            <div class="app-store__img">
+              <a href="https://apps.apple.com/ca/app/gradey-grade-tracker/id1431015395#:~:text=View%20in-,Mac,-App%20Store"
+                target="_blank"><img src="./img/svg/apple-app-store.svg" alt="Link to Apple app Store"></a>
+            </div>
+          </a>
+        </div>
+        <div class="decor-download anima2">
+          <img src="./img/svg/decor-download.svg" alt="Decor circle">
+        </div>
+      </section>
+      <section class="usage grid-item" id="usage">
+        <div class="content-container flex-direction-column">
+          <h2 class="usage__title">How to use</h2>
+          <div class="usage-card">
+            <div class="usage-card__img">
+              <img src="./img/svg/adv1.svg" alt="Number 1 pic">
+            </div>
+            <div class="usage-card-desc">
+              <h3 class="usage-card__title">Download Gradey App</h3>
+              <p class="usage-card__text">
+                Find and download the app via the link. It's currently available exclusively on the App Store
+              </p>
+            </div>
+          </div>
+          <div class="usage-card usage-card-second">
+            <div class="usage-card-desc">
+              <h3 class="usage-card__title">Create an account</h3>
+              <p class="usage-card__text">
+                Create an account in the app using your name, email and password.
+              </p>
+            </div>
+            <div class="usage-card__img">
+              <img src="./img/svg/adv2.svg" alt="Number 2 pic">
+            </div>
+          </div>
+          <div class="usage-card">
+            <div class="usage-card__img">
+              <img src="./img/svg/adv3.svg" alt="Number 3 pic">
+            </div>
+            <div class="usage-card-desc">
+              <h3 class="usage-card__title">You are ready to go</h3>
+              <p class="usage-card__text">Create your first cards defining your future goals and break them down into
+                subtasks for easier progress towards your objectives</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="feedback grid-item" id="feedback">
+        <div class="content-container flex-direction-column">
+          <h3 class="feedback__title">What our Users say</h3>
+          <div class="feedback__img">
+            <img src="./img/svg/cellphone_feedback.svg" alt="Cellphone Screen">
+          </div>
+        </div>
+        <div class="decor-feedback">
+          <img src="./img/svg/decor-feedback.svg" alt="Decor circle">
+        </div>
+        <div class="decor-feedback-bubble-1 anima">
+          <img src="./img/svg/decor-feedback-bubble-1.svg" alt="Decor circle">
+        </div>
+        <div class="decor-feedback-bubble-2 anima3">
+          <img src="./img/svg/decor-feedback-bubble-2.svg" alt="Decor circle">
+        </div>
+      </section>
+      <section class="contacts grid-item" id="contacts">
+        <div class="content-container flex-direction-column">
+          <div class="contact">
+            <h3 class="contact__title">
+              Lets get in touch. Send us a message
+            </h3>
+            <a href="./contact.html" class="btn__arr contact__btn">Send Message</a>
+          </div>
+          <div class="social-media">
+            <h4 class="social-media__title">Follow us</h4>
+            <ul class="social-media__list">
+              <li class="social-media__item">
+                <a href="https://twitter.com/sozentech" target="_blank" rel="noopener noreferrer" class="social-media__link">
+                  <img src="./img/svg/social_tweet.svg" alt="Tweeter pic">
+                </a>
+              </li>
+              <li class="social-media__item">
+                <a href="https://www.facebook.com/SozenTech" target="_blank" rel="noopener noreferrer" class="social-media__link">
+                  <img src="./img/svg/social_face.svg" alt="Facebook pic">
+                </a>
+              </li>
+              <li class="social-media__item">
+                <a href="https://www.instagram.com/sozentech/" target="_blank" rel="noopener noreferrer" class="social-media__link">
+                  <img src="./img/svg/social_insta.svg" alt="Instagram pic">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="copyright">COPYRIGHT 2023 - GradeyApp</div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="spinner" class="spinner"></div>
+  <script src="./scripts/addActiveLink.js" type="module"></script>
+  <script src="./components/burger-menu/burger-menu.js" type="module"></script>
+  <script src="./components/menu-overlay/menu-overlay.js" type="module"></script>
+</body>
+
+</html>

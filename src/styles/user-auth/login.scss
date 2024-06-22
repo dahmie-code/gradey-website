@@ -1,0 +1,73 @@
+.page-auth {
+    background: url('./img/RegisterBG.png') center no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    min-height: 75vh;
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.4);
+        z-index: -1;
+        content:'';
+    }
+
+    & > .container {
+        height: 100%;
+        min-height: 75vh;
+    }
+
+    &__wrapper {
+        margin: 10% auto;
+        padding: 10%;
+        background: $color-white;
+        border-radius: 12px;
+        max-width: 1024px;
+    }
+
+    &__title {
+        color: $color-dark-blue;
+        font: 600 32px/40px 'Lexend', sans-serif;
+    }
+
+    &__subtitle {
+        color: $subtitle-color;
+        font: 500 18px/21px 'Lexend', sans-serif;
+        margin-bottom: 50px;
+    }
+    &__image--container {
+        display: none;
+    }
+}
+
+@media screen and (min-width: $tabletMini) {
+    .page-auth {
+        &__wrapper {
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__image--container {
+            display: block;
+        }
+        &__content--container, &__image--container {
+            flex: 1;
+        }
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .page-auth {
+        &__wrapper {
+            padding: 80px;
+        }
+    }
+}
+
+.error-message {
+    color: $delete-button-color;
+}

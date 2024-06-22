@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Courses</title>
+  <link rel="stylesheet" href="main.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="./img/favicon-32x32.png" sizes="32x32" type="image/png">
+  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
+</head>
+
+<body>
+  <div class="layout-container">
+    <sidebar-component></sidebar-component>
+
+    <div class="course__content-container">
+      <header-component user="true"></header-component>
+
+      <subheader-component buttons='{"leftBtn": {"action": "openModal", "title": "Upcoming Assessments", "class": "assignments", "mobileIcon": "icon"}, 
+      "rightBtn": {"action": "openAddCourseModal", "title": "Add Course"}}'></subheader-component>
+
+      <div class="container container--fluid container--custom">
+
+        <main class="site-main">
+          <section class="section course-page">
+            <div id="average-wrap" class="course-summary">
+              <strong class="course-summary__item grade-summary__item-gpa">GPA: <span id="gpaTotal">N/A </span></strong>
+              <strong class="course-summary__item grade-summary__item-average">Average: <span id="averageTotal">0
+                </span>%</strong>
+            </div>
+            <div class="no-courses--container">
+              <img src="./img/empty-page-state.jpg" alt="flat design empty state page">
+              <h3>There are no courses yet</h3>
+              <p>Start here by adding your first course</p>
+              <button-component action="openAddCourseModal" title="Add Course" aria-label="Add Course"
+                class="button--blue "></button-component>
+            </div>
+            <div id="course-container" class="course-container"></div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+  <footer-component></footer-component>
+
+  <modal-component action="openModal" style-file="modal-form"></modal-component>
+  <div id="spinner" class="spinner"></div>
+</body>
+
+<script src="./scripts/loaderPage.js" type="module"></script>
+<script src="./components/course-card/course.js" type="module"></script>
+<script src="./components/modal/modal.js" type="module"></script>
+<script src="./components/buttons/button.js" type="module"></script>
+<script src="./components/header/header.js" type="module"></script>
+<script src="./components/subheader/subheader.js" type="module"></script>
+<script src="./components/footer/footer.js" type="module"></script>
+<script src="./components/sidebar/sidebar.js" type="module"></script>
+<script src="./scripts/upcomingAsmt.js" type="module"></script>
+<script src="./scripts/course.js" type="module"></script>
+
+
+</html>

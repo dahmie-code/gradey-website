@@ -1,0 +1,162 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 100px 0;
+  margin-top: 30px;
+
+
+  @include ipadPro {
+    padding: 50px 0;
+  }
+
+  @include tabletMini {
+    padding: 80px 0;
+    margin-top: 80px;
+  }
+
+  @include phones {
+    padding: 30px 0;
+  }
+
+  @include mini {
+    padding: 50px 0;
+  }
+
+  .decor-main {
+    position: absolute;
+    left: 0;
+    z-index: -1 ;
+    width: 100%;
+
+    @include ipadPro {
+      width: 100%;
+    }
+
+
+    @include tabletMini {
+      // width: 100%;
+      //top: -120px;
+    }
+
+    @include phones {
+      top: -20px;
+      width: 100%;
+    }
+
+    @include mini {
+      //width: 270px;
+      //top: 0px;
+    }
+  }
+
+  &-img {
+    display: flex;
+
+    @include tabletMini {
+      display: none;
+    }
+  }
+
+  .decor-bubble1 {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    z-index: -1;
+
+    @include tabletMini {
+      width: 450px;
+    }
+  }
+
+  .decor-bubble2 {
+    position: absolute;
+    bottom: -30%;
+    right: 0%;
+    z-index: -1;
+    width: 150px;
+
+    @include phones {
+      width: 100px;
+      bottom: -20%;
+    }
+
+  }
+
+  .decor-bubble3 {
+    position: absolute;
+    bottom: -20%;
+    left: 25%;
+    z-index: -1;
+
+    @include ipadPro {
+      display: none;
+    }
+
+    @include mini {
+      display: flex;
+      bottom: -34%;
+      left: 6%;
+      width: 80px;
+    }
+  }
+
+  &-desc {
+    @include phones {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &-desc__title {
+    color: $color-pink;
+    font-family: 'Lexend Mega';
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 61px;
+
+    margin-bottom: 18px;
+
+    @include ipadPro {
+      font-size: 60px;
+      line-height: 50px;
+    }
+
+    @include tabletMini {
+      font-size: 48px;
+      line-height: 50px;
+    }
+
+    @include phones {
+      font-size: 40px;
+      line-height: 46px;
+      text-align: center;
+    }
+
+    @include mini {
+      font-size: 30px;
+      line-height: 34px;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  &-desc__subtitle {
+    color: $color-white;
+    font-size: 28px;
+
+    margin-bottom: 84px;
+
+    @include ipadPro {
+      margin-bottom: 40px;
+    }
+
+    @include phones {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+}

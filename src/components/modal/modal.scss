@@ -1,0 +1,184 @@
+@import '../../styles/base/variables.scss';
+@import '../../styles/base/global.scss';
+.modal {
+  &__overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); // Overlay background
+      z-index: 9;
+  }
+
+  &__content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ 
+    // add a scroll for Modal on small screens
+    overflow-y: scroll;
+    max-height: 530px;
+    max-height: 90vh;
+
+    background-color: $color-white; // Modal content background
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    color: $subtitle-color;
+    min-width: 300px;
+    font-family: Lexend, sans-serif;
+    text-wrap: balance;
+    z-index: 10;
+
+    @media screen and (min-width: $tabletMini) {
+      min-width: 500px;
+    }
+  }
+
+  &__header {
+    background: $sidebar-bg-color;
+    display: flex;
+    padding: 15px 20px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  &__body {
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 18rem;
+
+    .modal__confirm--message {
+      margin: 15px 0 20px;
+    }
+  }
+
+  &__body ul {
+    margin: -18px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__body li{
+    padding: 8px 20px;
+  }
+
+  &__body h3 {
+    margin: 0;
+  }
+
+  &__body p {
+    margin: 0.2rem 0;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0;
+    color: $color-white;
+  }
+  &__text {
+      margin: 10px 0;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+    & svg:hover path{
+      stroke: $delete-button-color; // Change close button color on hover
+    }
+  }
+}
+
+.assessment {
+  &__date-select {
+    display: inline-block;
+    margin: 0 0 30px 0;
+    width: 100%;
+    height: 45px;
+    border-radius: 3px;
+    padding: 0 10px;
+    border: 1px solid #566176;
+    font: 400 1rem 'Lexend', sans-serif;
+    color: #566176;
+    cursor: pointer;
+  }
+  &__item {
+    box-shadow: 0 0.625rem 1.25rem 0 rgba(0, 0, 0, 0.3);
+    margin: 15px;
+    position: relative;
+    &:after {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: #eb3e82;
+      content:'';
+    }
+    &.lightBlue:after {
+      background: var(--lightBlue);
+    }
+    &.lightPink:after {
+      background: var(--lightPink);
+    }
+    &.pink:after {
+      background: var(--pink);
+    }
+    &.red:after {
+      background: var(--red);
+    }
+    &.orange:after {
+      background: var(--orange);
+    }
+    &.yellow:after {
+      background: var(--yellow);
+    }
+    &.lightYellow:after {
+      background: var(--lightYellow);
+    }
+    &.lightPurple:after {
+      background: var(--lightPurple);
+    }
+    &.purple:after {
+      background: var(--purple);
+    }
+    &.darkPurple:after {
+      background: var(--darkPurple);
+    }
+    &.darkBlue:after {
+      background: var(--darkBlue);
+    }
+    &.blue:after {
+      background: var(--blue);
+    }
+    &.lightGreen:after {
+      background: var(--lightGreen);
+    }
+    &.green:after {
+      background: var(--green);
+    }
+    &.darkGreen:after {
+      background: var(--darkGreen);
+    }
+    &.darkGray:after {
+      background: var(--darkGray);
+    }
+  }
+  &__container {
+    .no-assessments {
+      margin: 30px 0;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+.header {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #DCDFE5;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  background: white;
+
+  &-logo {
+    max-width: 3.75rem;
+    padding: 0.3125rem 0 0 0;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.menu-list {
+  display: flex;
+
+  @include tabletMini {
+    display: none;
+  }
+
+  @include phones {
+    display: none;
+  }
+}
+
+.menu-item {
+  color: $main-text-color;
+  margin-right: 50px;
+  font-size: 18px;
+  white-space: nowrap;
+
+  &__link {
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+  }
+
+  @include ipadPro {
+    margin-right: 25px;
+  }
+
+  @include ipadPro {
+    font-size: 14px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--active {
+    border-bottom: 3px solid $color-pink;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    border-bottom: 3px solid $color-pink;
+    transition: all 0.3s;
+  }
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.content-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include fullScreen {
+    max-width: 1130px;
+  }
+
+  @include ipadPro {
+    max-width: 1000px;
+  }
+
+  @include tabletMini {
+    max-width: 700px;
+  }
+
+  @include mini {
+    width: 95%;
+  }
+
+}
+
+.btn {
+  background: linear-gradient(90deg, rgba(255,147,143,1) 0%, rgba(255,46,136,1) 100%);
+  color: white;
+  border-radius: 15px;
+  padding: 10px 30px;
+  position: relative;
+  font-size: 22px;
+  font-weight: 400;
+  transition: background ease-in 0.3s;
+  white-space: nowrap;
+
+  @include ipadPro {
+    font-size: 14px;
+  }
+
+  &:hover {
+    background: $gradient-btn-hover;
+  }
+
+  &__arr {
+    @extend .btn;
+    padding: 18px 70px 18px 30px;
+    font-size: 22px;
+    font-weight: bold;
+
+    @include ipadPro {
+      font-size: 16px;
+      padding: 12px 45px 12px 20px;
+    }
+
+    &:after {
+      content: url("./img/arr_right.png");
+      width: 30px;
+      height: 30px;
+      padding-left: 10px;
+      display: block;
+      position: absolute;
+      right: 30px;
+      top: 20px;
+
+      @include ipadPro {
+        padding-left: 0px;
+        right: 12px;
+        top: 10px;
+      }
+    }
+  }
+}
+

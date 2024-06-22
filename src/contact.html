@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="main.min.css" type="text/css" rel="stylesheet">
+  <link rel="icon" href="./img/favicon-32x32.png" sizes="32x32" type="image/png">
+  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+
+<body>
+  <header-component class="header-auth"></header-component>
+  <main class="contact-wrapper">
+    <div class="contact-container justify-content-center align-items-centerpage-auth__wrapper" id="contactus">
+      <div class="contact-wrapper__form">
+        <div class="contact-wrapper__heading">
+          <h3 class="contact-wrapper__title">CONTACT</h3>
+          <p class="contact-wrapper__subtitle">Lets get in touch. Send us a message</p>
+        </div>
+        <div class="contact-wrapper__form-container">
+          <form method="post" id="form">
+            <p><input class="contact-wrapper__input" id="name" type="text" placeholder="Name" name="Name"></p>
+            <em id="nameError" class="error"></em>
+            <p><input class="contact-wrapper__input" id="email" type="text" placeholder="Email" name="Email">
+            </p>
+            <em id="emailError" class="error"></em>
+            <p><input class="contact-wrapper__input" id="subject" type="text" placeholder="Subject" name="Subject"></p>
+            <em id="subjectError" class="error"></em>
+            <p><textarea class="contact-wrapper__input" rows="5" cols="60" id="message" type="text"
+                placeholder="Message" name="Message"></textarea></p>
+            <em id="messageError" class="error"></em>
+            <div class="contact-wrapper__btn">
+              <button class="contact-wrapper__button" type="submit" id="submitButton">
+                <svg width="18" height="18" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1.74985 9.6845C8.45997 6.50267 12.9319 4.40696 15.1654 3.39735C21.5565 0.521481 22.8936 0.0166685 23.7523 0.0013717C24.0697 -0.0132377 24.3823 0.0891995 24.6393 0.292012C24.8245 0.463371 24.9448 0.703121 24.9771 0.965105C25.0076 1.2906 25.0076 1.61859 24.9771 1.94409C24.6393 5.90607 23.1329 15.4975 22.3728 19.9182C22.049 21.7998 21.4157 22.427 20.7962 22.4882C19.4731 22.6259 18.4453 21.5245 17.1643 20.6067C15.1372 19.1687 13.983 18.2662 12.0263 16.8589C9.74575 15.2373 11.2237 14.3348 12.5187 12.8815C12.8566 12.4992 18.7409 6.67096 18.8534 6.15085C18.8692 6.07363 18.8684 5.99354 18.8514 5.91666C18.8343 5.83979 18.8015 5.76814 18.7551 5.70721C18.682 5.66302 18.5993 5.63983 18.5156 5.63983C18.4318 5.63983 18.3497 5.66302 18.2764 5.70721C18.0653 5.70721 14.8417 8.07828 8.57742 12.6675C7.8576 13.2759 6.98257 13.6286 6.07165 13.677C4.85321 13.5097 3.65455 13.202 2.49599 12.7592C1.08828 12.239 -0.0801551 11.979 0.00431039 11.1072C0.00431039 10.6635 0.637731 10.2046 1.72168 9.73039L1.74985 9.6845Z"
+                    fill="white" />
+                </svg> Send Message
+              </button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer-component></footer-component>
+
+  <modal-component action="openModal" style-file="modal-form"></modal-component>
+  <div id="spinner" class="spinner"></div>
+
+  <script src="./components/modal/modal.js" type="module"></script>
+  <script src="./components/header/header.js" type="module"></script>
+  <script src="./components/footer/footer.js" type="module"></script>
+  <script type="module" src="scripts/index.js"></script>
+
+</body>
+
+</html>

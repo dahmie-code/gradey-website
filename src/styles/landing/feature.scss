@@ -1,0 +1,207 @@
+.feature {
+  margin-top: 200px;
+  padding: 180px 0;
+
+  @include ipadPro {
+    margin-top: 150px;
+    padding: 50px 0;
+  }
+
+  @include phones {
+    padding: 30px 0;
+  }
+}
+
+.feature, .feature-dbl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &-content-container {
+    @include phones {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .feature-dbl {
+    margin-top: 0px;
+    padding: 30px 0;
+  }
+  &-img {
+    align-self: baseline;
+
+    @include ipadPro {
+      margin-right: 0px;
+    }
+
+    @include mini {
+      margin-top: 0px;
+      margin-bottom: 0;
+      padding: 0px 0;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &-img-pic {
+    width: 100%;
+    margin-top: 10%;
+    margin-left: 10%;
+  }
+}
+
+.feature-desc {
+  @include phones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    max-width: 520px;
+    margin-bottom: 120px;
+
+    &--left {
+      @include ipadPro {
+        margin-left: 60px;
+      }
+
+      @include phones {
+        margin-left: 0px;
+      }
+    }
+
+    @include ipadPro {
+      width: 95%;
+      margin-bottom: 50px;
+
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+    color: $color-dark-blue;
+
+    margin-bottom: 35px;
+
+    @include ipadPro {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    @include mini {
+      font-size: 26px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: 28px;
+    font-weight: 400;
+    color: $color-dark-blue;
+    line-height: 33px;
+
+    @include ipadPro {
+      font-size: 20px;
+      line-height: 23px;
+    }
+
+    @include mini {
+      font-size: 18px;
+      text-align: justify;
+    }
+  }
+}
+
+.feature-dbl-img-pic {
+  transform: rotate(22deg);
+  margin-top: 20%;
+  margin-left: -10%;
+}
+
+
+.decor-feature {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  z-index: -1;
+
+  @include ipadPro {
+    width: 43%;
+  }
+
+  @include phones {
+    display: none;
+  }
+
+  &-mobile {
+    display: none;
+
+    @include phones {
+      display: flex;
+      width: 100%;
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      z-index: -1;
+    }
+  }
+}
+
+.decor-feature-bubble-1 {
+  position: absolute;
+  bottom: -5%;
+  left: 15%;
+  z-index: -1;
+
+  @include phones {
+    bottom: 20%;
+  }
+}
+
+.decor-feature2 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+
+  @include ipadPro {
+    width: 60%;
+  }
+}
+
+.decor-feature-bubble-2 {
+  position: absolute;
+  bottom: -10%;
+  right: 15%;
+  z-index: -1;
+}
+
+.feature-dbl {
+  margin-top: 0px;
+  padding: 30px 0;
+
+  @include phones {
+    .feature-img {
+      display: none;
+      padding: 0px 0;
+    }
+  }
+}
+
+.feature-img {
+  margin-bottom: 70px;
+}

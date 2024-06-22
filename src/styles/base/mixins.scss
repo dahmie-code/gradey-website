@@ -1,0 +1,39 @@
+/*@function rem($px) {
+    @return $px / 16px + 0rem;
+}
+*/
+
+//$fullscreen: 1400px;
+
+@mixin fullScreen {
+    @media screen and (max-width: $fullScreen) {
+        @content;
+    }
+}
+
+
+//$ipadPro: 1024px;
+@mixin ipadPro {
+    @media screen and (max-width: $ipadPro) {
+        @content;
+    }
+}
+
+//$tabletMini: 768px;
+@mixin tabletMini {
+    @media screen and (max-width: $tabletMini) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+@mixin mini {
+    @media screen and (max-width: $mini) {
+        @content;
+    }
+}

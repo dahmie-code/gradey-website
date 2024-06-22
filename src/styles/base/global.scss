@@ -1,0 +1,130 @@
+:root {
+    --lightPink: rgb(250, 165, 200);
+    --pink: rgb(235, 62, 130);
+    --red: rgb(222, 33, 33);
+    --orange: rgb(245, 145, 45);
+    --yellow: rgb(255, 205, 5);
+    --lightYellow: rgb(255, 245, 160);
+    --lightPurple: rgb(200, 160, 250);
+    --purple: rgb(140, 0, 240);
+    --darkPurple: rgb(75, 0, 125);
+    --darkBlue: rgb(0, 0, 100);
+    --blue: rgb(15, 75, 255);
+    --lightBlue: rgb(55, 140, 250);
+    --lightGreen: rgb(90, 225, 155);
+    --green: rgb(20, 220, 20);
+    --darkGreen: rgb(10, 100, 10);
+    --darkGray: rgb(114, 114, 114);
+  }
+.container {
+    max-width: 1280px;
+    width: auto;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+
+    &--fluid {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    &--custom {
+        padding: 0;
+        width: 100%;
+    }
+
+    @media screen and (min-width: $tabletMini) {
+        max-width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+main {
+    flex: 6;
+    min-height: 75vh;
+    @media screen and (min-width: $tabletMini) {
+        max-width: calc(100% - 5rem);
+    }
+}
+main.page-auth {
+    max-width: 100%;
+}
+
+sidebar-component {
+    display: none;
+    background: $sidebar-bg-color;
+    transition: width cubic-bezier(0,0,.2,1) .15s 0s;
+    position: fixed;
+    height: 100%;
+    width: 80px;
+    z-index: 9;
+    overflow: hidden;
+
+    @media screen and (min-width: $tabletMini) {
+        display: block;
+        &:hover {
+            width: 18.75rem;
+            transition: width cubic-bezier(0,0,.2,1) .2s .1s;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
+
+    &.is-active {
+        display: block;
+        height: 100vh;
+    }
+}
+
+.site-main {
+    margin: 20px;
+    @media screen and (min-width: $tabletMini) {
+        margin: 40px;
+    }
+
+    &--centred {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+input:focus,input:focus-visible  {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4);
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hide-small {
+    @media screen and (max-width: $tabletMini) {
+        display: none;
+    }
+}
+
+.flex {display: flex;}
+.flex-direction-row {flex-direction: row;}
+.flex-direction-row-reverse {flex-direction: row-reverse}
+.flex-direction-column {flex-direction: column}
+.flex-direction-column-reverse {flex-direction: column-reverse}
+.flex-wrap-wrap {flex-wrap: wrap;}
+.flex-wrap-nowrap {flex-wrap: nowrap;}
+.flex-wrap-reverse {flex-wrap: wrap-reverse;}
+.justify-content-between {justify-content: space-between;}
+.justify-content-start { justify-content: flex-start;}
+.justify-content-end { justify-content: flex-end;}
+.justify-content-center { justify-content: center;}
+.justify-content-around { justify-content: space-around;}
+.justify-content-evenly { justify-content: space-evenly;}
+.align-items-stretch {align-items: stretch;}
+.align-items-start {align-items: flex-start;}
+.align-items-end {align-items: flex-end;}
+.align-items-center {align-items: center;}
+.align-items-baseline {align-items: baseline;}

@@ -1,0 +1,29 @@
+@import '../../styles/base/variables';
+@import '../../styles/base/font';
+@import '../../styles/base/global';
+
+.search-block {
+    width: 100%;
+    position: relative;
+    &__input {
+        width: 100%;
+        min-height: 46px;
+        border: 1px solid $color-dark-blue;
+        border-radius: 12px;
+        padding: 0 17px;
+        font: 400 1rem 'Legend', sans-serif;
+        color: $color-dark-blue;
+        background: transparentize($color-white, 0.4);
+
+        &::placeholder,
+        &::-webkit-input-placeholder {
+            color: $icons-color;
+        }
+    }
+    &__icon {
+        position: absolute;
+        top: 50%;
+        right: -15px;
+        transform: translateY(-50%);
+    }
+}

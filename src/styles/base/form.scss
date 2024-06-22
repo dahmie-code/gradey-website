@@ -1,0 +1,108 @@
+.form {
+    margin-bottom: 20px;
+
+    &__label {
+        color: $color-dark-blue;
+        font: 500 18px/21px 'Lexend', sans-serif;
+    }
+    sup {
+        color: $delete-button-color;
+    }
+
+    &__group {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input--container {
+        position: relative;
+    }
+    &__input--image {
+        position: absolute;
+        top: 13px;
+        right: 20px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+            path {
+                stroke: $color-pink;
+                transition: all 0.3s;
+            }
+        }
+    }
+
+    &__input {
+        width: 100%;
+        border: 1px solid $icons-color;
+        border-radius: 12px;
+        min-height: 48px;
+        padding: 0 0 0 20px;
+        font: 400 14px/21px 'Lexend', sans-serif;
+
+        &::placeholder {
+            color: $icons-color;
+            font: 400 14px/21px 'Lexend', sans-serif;
+        }
+    }
+
+    &__button {
+        position: relative;
+        display: inline-block;
+        padding: 15px 35px;
+        background:  $gradient-btn;
+        border-radius: 12px;
+        color: $color-white;
+        border: none;
+        font: 500 22px/21px 'Lexend', sans-serif;
+        text-align: center;
+        transition: all 0.3s;
+        cursor: pointer;
+        &:before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: $gradient-btn-hover;
+            border-radius: 12px;
+            color: $color-white;
+            padding: 15px 35px;
+            z-index: -1;
+            opacity: 0;
+        }
+        &:hover::before {
+            opacity: 1;
+            transition: all 0.3s;
+            z-index: 0;
+          }
+
+          &--submit {
+            &:before { 
+                content: 'Submit';
+            }
+          }
+          &--signup {
+            &:before { 
+                content: 'Create Account';
+            }
+          }
+    }
+}
+
+.link {
+    color: $color-dark-blue;
+    font-weight: 600;
+    transition: all 0.3s;
+    &:hover {
+        color:  $color-pink;
+        transition: all 0.3s;
+    }
+}
+
+input:focus,input:focus-visible  {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4);
+}

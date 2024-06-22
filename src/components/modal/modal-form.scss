@@ -1,0 +1,168 @@
+@import '../../styles/base/variables.scss';
+.add-item__buttons {
+    text-align: right;
+}
+
+.form-item {
+    margin-bottom: 20px;
+}
+
+.add-item__input {
+    min-width: 218px;
+    min-height: 48px;
+    padding: 0 15px;
+    border: 1px solid $icons-color;
+    border-radius: 12px;
+    color: $color-dark-blue;
+    font: 400 16px 'Lexend', sans-serif;
+    &::placeholder {
+        font: 400 16px 'Lexend', sans-serif;   
+        color: $icons-color;
+    }
+}
+
+select.add-item__input {
+    min-width: 250px;
+    width: 100%;
+}
+
+input.add-item__input {
+    width: calc(100% - 30px);
+}
+
+label.add-item__content {
+    margin-bottom: 5px;
+    display: block;
+    font: 500 15px/21px 'Lexend', sans-serif;
+    letter-spacing: 0.2px;
+    color: $color-dark-blue;
+    @media screen and (min-width: $tabletMini) {
+        display: inline-block;
+    }
+}
+
+.add-item__button {
+    padding: 15px 30px;
+    border: 1px solid $color-dark-blue;
+    border-radius: 12px;
+    font: 400 16px/24px 'Lexend', sans-serif;
+    transition: all 0.3s;
+    cursor: pointer;
+    &--save {
+        background: $color-dark-blue;
+        color: $color-white;
+        margin-right: 12px;
+        &:hover {
+            background: $color-white;
+            color: $color-dark-blue;
+            transition: all 0.3s;
+        }
+    }
+    &--cancel {
+        background: transparent;
+        color: $color-dark-blue;
+        transition: all 0.3s;
+        &:hover {
+            background: $delete-button-color;
+            border-color: $delete-button-color;
+            color: $color-white;
+        }
+    }
+}
+
+.modal__confirm--container, 
+.modal__confirm--container .add-item__buttons {
+  text-align: center;
+}
+
+.inactive {
+    display: none;
+}
+
+.checkbox-container {
+    position: relative;
+    display: inline-block;
+    &:before {
+        content: "";
+        height: 25px;
+        width: 25px;
+        background-color: #fafafa;
+        position: absolute;
+        margin: auto;
+        top: -4px;
+        left: 16px;
+        right: auto;
+        bottom: 0;
+        border-radius: 50%;
+        box-shadow: 2px 2px 10px #c3c3c3, 2px 2px 2px rgba(189, 189, 189, 0.6);
+        transition: 0.15s;
+        z-index: 2;
+    }
+    &.checked:before {
+        left: auto;
+        right: 16px;
+    }
+}
+input[type="checkbox"] {
+    position: relative;
+    -webkit-appearance: none;
+    outline: none;
+    min-width: 80px;
+    min-height: 35px;
+    height: 20px;
+    width: 30px;
+    border: 2px solid #fafafa;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    box-shadow: 9px 9px 16px rgba(189, 189, 189, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5), inset 10px 10px 15px -10px #c3c3c3, inset -10px -10px 15px -10px #fff;
+
+}
+input[type="checkbox"]:checked {
+    background: #e6e7f5;
+}
+
+.form-item__checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 400px;
+}
+.enter__gpaScales {
+    margin-top: 15px;
+    .gpa-scale-input {
+        display: flex;
+        label {
+            max-width: 60px;
+            margin-right: 10px;
+        }
+        input {
+            max-width: 100%;
+            &:focus {
+                border: 1px solid #ccc;
+            }
+        }
+    }
+}
+
+.color__buttons {
+    margin: 15px 0;
+    max-width: 400px;
+    button {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-bottom: 10px;
+        border: 2px solid transparent;
+    }
+}
+@media screen and (min-width: $tabletMini) {
+    .modal__content.modal__content-form {
+        max-width: 500px;
+    }
+  }
+
+  .error-box {
+    color: $delete-button-color;
+  }

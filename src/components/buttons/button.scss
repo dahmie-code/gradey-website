@@ -1,0 +1,82 @@
+@import '../../styles/base/font.scss';
+@import '../../styles/base/variables.scss';
+.button {
+    padding: 12px 30px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 12px;
+    background: transparent;
+    font: 400 16px/24px 'Lexend', sans-serif;
+    cursor: pointer;
+}
+
+.button--blue {
+    border-color: $button-color-blue;
+    background: $button-color-blue;
+    color: $color-white;
+    transition: all 0.3s;
+    &:hover {
+        border-color: $sidebar-bg-color;
+        background: $sidebar-bg-color;
+        transition: all 0.3s;
+    }
+}
+
+.button--white {
+    border-color: $color-white;
+    color: $color-white;
+    transition: all 0.3s;
+    &:hover {
+        border-color: $icons-color;
+        color: $icons-color;
+        background: $color-white;
+        transition: all 0.3s;
+    }
+}
+
+.button--gray {
+    border-color: $icons-color;
+    color: $icons-color;
+}
+
+.button--gray-full {
+    background: $icons-color;
+}
+
+@media screen and (max-width: 767px) {
+    [mobile-icon=icon] {
+        position: relative;
+        font-size: 0;
+        padding: 0;
+        background: url('../../img/svg/calendar_blue.svg') center no-repeat;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        border: 1px solid #0279fe;
+        z-index: 0;
+
+        &:after {
+            position: absolute;
+            top:0;
+            left: 0;
+            background: url('../../img/svg/calendar_white.svg') center no-repeat;
+            content:'';
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            height: 23px;
+            opacity: 0;
+        }
+
+        &:hover {
+            transition: all 0.3s;
+            box-shadow: inset 1rem 1rem 1.25rem 2rem $sidebar-bg-color;
+            &:after {
+                opacity: 1;
+            }
+
+        }
+    }
+}
