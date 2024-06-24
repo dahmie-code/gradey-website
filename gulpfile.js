@@ -144,6 +144,7 @@ task("default", series(
     "copyPicture",
     "styles",
     "scripts",
+    'replace-env', 
     'component-scripts',
     'component-styles',
     "icons"

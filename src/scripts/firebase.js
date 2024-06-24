@@ -3,13 +3,13 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, si
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js';
 
 const firebaseConfig = {
-  apiKey: 'process.env.FIREBASE_API_KEY',
-  authDomain: 'process.env.AUTH_DOMAIN',
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
   databaseURL: "https://gradey-webapp-default-rtdb.firebaseio.com",
-  projectId: 'process.env.PROJECT_ID',
-  storageBucket: 'process.env.STORAGE_BUCKET',
-  messagingSenderId: 'process.env.MESSAGING_SENDER_ID',
-  appId: 'process.env.APP_ID',
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
   measurementId: "G-7RRSRQL016"
 };
 
