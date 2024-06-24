@@ -1,3 +1,4 @@
+![Gradey_Web_App](src/img/gradey_desktop.png)
 ## Project Name: Gradey – Grade Tracker Website
 ### Team members: Archana Patil, Natalia Zhelonkina, Damilola Ogungbenro, Jiji Raghavan, Anna Prysiazhniuk
 
