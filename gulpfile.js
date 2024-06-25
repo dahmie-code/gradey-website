@@ -1,4 +1,3 @@
-const dotenv = require('dotenv');
 const replace = require('gulp-replace');
 const { src, dest, task, series, watch, parallel } = require("gulp");
 const sass = require("gulp-sass")(require('sass'));
@@ -19,21 +18,9 @@ const svgSprite = require("gulp-svg-sprite");
 const gulpif = require("gulp-if");
 
 // Load environment variables
-dotenv.config();
 const env = process.env.NODE_ENV;
 
 const { SRC_PATH, DIST_PATH, STYLES_LIBS, JS_LIBS } = require("./gulp.config");
-
-task('replace-env', function() {
-    return src('src/scripts/*.js')
-      .pipe(replace('process.env.FIREBASE_API_KEY', `"${process.env.FIREBASE_API_KEY}"`))
-      .pipe(replace('process.env.AUTH_DOMAIN', `"${process.env.AUTH_DOMAIN}"`))
-      .pipe(replace('process.env.PROJECT_ID', `"${process.env.PROJECT_ID}"`))
-      .pipe(replace('process.env.STORAGE_BUCKET', `"${process.env.STORAGE_BUCKET}"`))
-      .pipe(replace('process.env.MESSAGING_SENDER_ID', `"${process.env.MESSAGING_SENDER_ID}"`))
-      .pipe(replace('process.env.APP_ID', `"${process.env.APP_ID}"`))
-      .pipe(dest('dist/scripts'));
-  });
 
 task("clean", () => {
   return src(`${DIST_PATH}/**/*`, { read: false }).pipe(rm());
