@@ -88,7 +88,10 @@ const modalComponent = document.querySelector('modal-component');
 const subheaderComponent = document.querySelector('subheader-component');
 const openModalButton = subheaderComponent.shadowRoot.querySelector('.assignments');
 
-const userData = await getCoursesFor(userId);
+(async function() {
+  const userData = await getCoursesFor(userId);
+  console.log(userData); 
+})();
 const assessments = getAllUpcomingAssessments(userData);
 
 const createModalData = async () => {
