@@ -117,8 +117,6 @@ task("watch", () => {
   watch("./src/*.html", series("copy:html"));
   watch('./src/**/*.png', series('copyPicture'));
   watch('./src/**/*.png', series('copyPicture'));
-  watch("./src/scripts/*.js", series("scripts", "replace-env"));
-  watch('./src/components/**/*.js', series('component-scripts', "replace-env"));
   watch('./src/img/svg/*.svg', series('icons'));
 });
 
@@ -130,7 +128,6 @@ task("default", series(
     "copyPicture",
     "styles",
     "scripts",
-    'replace-env', 
     'component-scripts',
     'component-styles',
     "icons"
