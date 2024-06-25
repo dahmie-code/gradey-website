@@ -20,7 +20,10 @@ if (!userId) { // User is not logged in, redirect them to the login page
   localStorage.clear();
 }
 
-const gradeItemsData = await getGradeItemsData();
+(async function() {
+  const gradeItemsData = await getGradeItemsData();
+  console.log(gradeItemsData); // Do something with the data
+})();
 
 function initializeSearch() {
   const subheaderComponent = document.querySelector('subheader-component');
