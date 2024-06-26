@@ -15,20 +15,6 @@ const uglify = require("gulp-uglify");
 const svgo = require("gulp-svgo");
 const svgSprite = require("gulp-svg-sprite");
 const gulpif = require("gulp-if");
-const gulp = require('gulp');
-const deploy = require('gulp-gh-pages');
-
-/**
- * Push build to gh-pages
- */
-
-gulp.task('deploy', function () {
-  return gulp.src("./prod/**/*")
-    .pipe(deploy({ 
-      remoteUrl: "github.com/dahmie-code/gradey-website/github.io.git",
-      branch: "master"
-    }))
-});
 
 // Load environment variables
 const env = process.env.NODE_ENV;
